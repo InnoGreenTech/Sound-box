@@ -1,0 +1,293 @@
+EESchema Schematic File Version 4
+LIBS:sound_box-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5EEF9E88
+P 6600 3450
+F 0 "A1" H 6600 2364 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 6600 2273 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 6750 2500 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 6600 2450 50  0001 C CNN
+	1    6600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L DFR0299:DFR0299 U1
+U 1 1 5EEF9F28
+P 4150 3750
+F 0 "U1" H 4150 4617 50  0000 C CNN
+F 1 "DFR0299" H 4150 4526 50  0000 C CNN
+F 2 "Arduino:MODULE_DFR0299" H 4150 3750 50  0001 L BNN
+F 3 "None" H 4150 3750 50  0001 L BNN
+F 4 "DFRobot" H 4150 3750 50  0001 L BNN "Champ4"
+F 5 "None" H 4150 3750 50  0001 L BNN "Champ5"
+F 6 "Dfplayer - a Mini Mp3 Player" H 4150 3750 50  0001 L BNN "Champ6"
+F 7 "DFR0299" H 4150 3750 50  0001 L BNN "Champ7"
+F 8 "Unavailable" H 4150 3750 50  0001 L BNN "Champ8"
+	1    4150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 5EEFA258
+P 5000 5600
+F 0 "SW2" H 5000 5885 50  0000 C CNN
+F 1 "Play" H 5000 5794 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 5000 5800 50  0001 C CNN
+F 3 "" H 5000 5800 50  0001 C CNN
+	1    5000 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5EEFAA20
+P 2900 2300
+F 0 "SW1" H 2900 2585 50  0000 C CNN
+F 1 "Power_in" H 2900 2494 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_CuK_OS102011MA1QN1_SPDT_Angled" H 2900 2300 50  0001 C CNN
+F 3 "" H 2900 2300 50  0001 C CNN
+	1    2900 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EEFAD76
+P 5200 3650
+F 0 "R1" H 5270 3696 50  0000 L CNN
+F 1 "1 k" H 5270 3605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5130 3650 50  0001 C CNN
+F 3 "~" H 5200 3650 50  0001 C CNN
+	1    5200 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 3650 4750 3650
+Wire Wire Line
+	2100 2300 2700 2300
+Wire Wire Line
+	2700 4150 3550 4150
+Wire Wire Line
+	2600 4250 3550 4250
+$Comp
+L power:GND #PWR0101
+U 1 1 5EEFBC6D
+P 4800 5800
+F 0 "#PWR0101" H 4800 5550 50  0001 C CNN
+F 1 "GND" H 4805 5627 50  0000 C CNN
+F 2 "" H 4800 5800 50  0001 C CNN
+F 3 "" H 4800 5800 50  0001 C CNN
+	1    4800 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5600 5450 5600
+Wire Wire Line
+	4750 4450 4800 4450
+Wire Wire Line
+	4800 5600 4800 5800
+Connection ~ 4800 5600
+Wire Wire Line
+	2100 2400 2200 2400
+Wire Wire Line
+	4750 3150 5100 3150
+Wire Wire Line
+	5100 3150 5100 2300
+Wire Wire Line
+	5100 2300 6800 2300
+Wire Wire Line
+	6800 2300 6800 2450
+$Comp
+L power:GND #PWR0102
+U 1 1 5EEFF388
+P 6600 4800
+F 0 "#PWR0102" H 6600 4550 50  0001 C CNN
+F 1 "GND" H 6605 4627 50  0000 C CNN
+F 2 "" H 6600 4800 50  0001 C CNN
+F 3 "" H 6600 4800 50  0001 C CNN
+	1    6600 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4450 6600 4700
+Wire Wire Line
+	6700 4450 6700 4700
+Wire Wire Line
+	6700 4700 6600 4700
+Connection ~ 6600 4700
+Wire Wire Line
+	6600 4700 6600 4800
+$Comp
+L Sensor_Optical:LDR03 R2
+U 1 1 5EF00558
+P 7900 3250
+F 0 "R2" H 7970 3296 50  0000 L CNN
+F 1 "LDR03" H 7970 3205 50  0000 L CNN
+F 2 "OptoDevice:R_LDR_5.0x4.1mm_P3mm_Vertical" V 8075 3250 50  0001 C CNN
+F 3 "http://www.elektronica-componenten.nl/WebRoot/StoreNL/Shops/61422969/54F1/BA0C/C664/31B9/2173/C0A8/2AB9/2AEF/LDR03IMP.pdf" H 7900 3200 50  0001 C CNN
+	1    7900 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EF00625
+P 7900 3750
+F 0 "R3" H 7970 3796 50  0000 L CNN
+F 1 "4.7k" H 7970 3705 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7830 3750 50  0001 C CNN
+F 3 "~" H 7900 3750 50  0001 C CNN
+	1    7900 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2300 7900 2300
+Connection ~ 6800 2300
+Wire Wire Line
+	7900 2300 7900 3100
+$Comp
+L power:GND #PWR0103
+U 1 1 5EF05307
+P 7900 4200
+F 0 "#PWR0103" H 7900 3950 50  0001 C CNN
+F 1 "GND" H 7905 4027 50  0000 C CNN
+F 2 "" H 7900 4200 50  0001 C CNN
+F 3 "" H 7900 4200 50  0001 C CNN
+	1    7900 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3900 7900 4200
+Wire Wire Line
+	7900 3400 7900 3500
+Wire Wire Line
+	7100 3450 7600 3450
+Wire Wire Line
+	7600 3450 7600 3500
+Wire Wire Line
+	7600 3500 7900 3500
+Connection ~ 7900 3500
+Wire Wire Line
+	7900 3500 7900 3600
+$Comp
+L pspice:DIODE D1
+U 1 1 5EF07E7F
+P 3600 2200
+F 0 "D1" H 3600 2465 50  0000 C CNN
+F 1 "DIODE" H 3600 2374 50  0000 C CNN
+F 2 "Diode_THT:D_DO-34_SOD68_P7.62mm_Horizontal" H 3600 2200 50  0001 C CNN
+F 3 "~" H 3600 2200 50  0001 C CNN
+	1    3600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4450 4800 4900
+$Comp
+L Connector:Screw_Terminal_01x04 J1
+U 1 1 5EF395D3
+P 1900 2400
+F 0 "J1" H 1820 2717 50  0000 C CNN
+F 1 "Screw_Terminal_01x04" H 1820 2626 50  0000 C CNN
+F 2 "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type086_RT03404HBLC_1x04_P3.81mm_Horizontal" H 1900 2400 50  0001 C CNN
+F 3 "~" H 1900 2400 50  0001 C CNN
+	1    1900 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5EEFD27F
+P 2200 2950
+F 0 "#PWR0104" H 2200 2700 50  0001 C CNN
+F 1 "GND" H 2205 2777 50  0000 C CNN
+F 2 "" H 2200 2950 50  0001 C CNN
+F 3 "" H 2200 2950 50  0001 C CNN
+	1    2200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2400 2200 2950
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5EF3D304
+P 2200 3600
+F 0 "J2" H 2306 3778 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2306 3687 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 2200 3600 50  0001 C CNN
+F 3 "~" H 2200 3600 50  0001 C CNN
+	1    2200 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3600 2700 3600
+Wire Wire Line
+	2700 3600 2700 4150
+Wire Wire Line
+	2400 3700 2600 3700
+Connection ~ 2600 3700
+Wire Wire Line
+	2600 3700 2600 4250
+Wire Wire Line
+	3400 2200 3100 2200
+Wire Wire Line
+	3800 2200 6500 2200
+Wire Wire Line
+	6500 2200 6500 2450
+Wire Wire Line
+	2100 2500 2600 2500
+Wire Wire Line
+	2600 2500 2600 3700
+Wire Wire Line
+	2100 2600 2700 2600
+Wire Wire Line
+	2700 2600 2700 3600
+Connection ~ 2700 3600
+Wire Wire Line
+	5900 5600 5900 3150
+Wire Wire Line
+	5900 3150 6100 3150
+Wire Wire Line
+	5750 3650 5750 3250
+Wire Wire Line
+	5750 3250 6100 3250
+Wire Wire Line
+	5350 3650 5750 3650
+Wire Wire Line
+	5850 3750 5850 3350
+Wire Wire Line
+	5850 3350 6100 3350
+Wire Wire Line
+	4750 3750 5850 3750
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5EF48E96
+P 5350 4700
+F 0 "J?" H 5456 4878 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 5456 4787 50  0000 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P3.81mm_Drill1mm" H 5350 4700 50  0001 C CNN
+F 3 "~" H 5350 4700 50  0001 C CNN
+	1    5350 4700
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5350 4900 4800 4900
+Connection ~ 4800 4900
+Wire Wire Line
+	4800 4900 4800 5600
+Wire Wire Line
+	5450 4900 5450 5600
+Connection ~ 5450 5600
+Wire Wire Line
+	5450 5600 5900 5600
+$EndSCHEMATC
